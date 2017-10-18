@@ -15,7 +15,8 @@
     "pg": "^7.3.0",
     "sequelize": "^4.13.5",
     "sequelize-cli": "^3.0.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "newrelic": ">=0.9"
   },
   "engines": {
     "node": "6.11.x"
