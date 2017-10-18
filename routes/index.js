@@ -9,11 +9,14 @@ router.get("/", function(req, res, next) {
       `SELECT
           name,
           birth_date,
+		  to_char(birth_date, 'MMDD') AS birthday,
           EXTRACT(YEAR FROM age(birth_date)) AS age
       FROM
           "People"
+      WHERE
+      	  to_char(current_timestamp, 'MMDD') < to_char(birth_date, 'MMDD')
       ORDER BY
-          birth_date DESC`,
+          birthday ASC`,
       {
         model: models.Person
       }
