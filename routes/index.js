@@ -20,9 +20,7 @@ router.get("/", function(req, res, next) {
     )
     .then(function(people) {
       res.render("index", { title: "Celebrities, ordered by age", people: people });
-    })
-    .then(function(people) {
-      console.log(people);
+      console.log("People: " + people);
     });
 });
 
